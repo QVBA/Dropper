@@ -1,2 +1,7 @@
 # Dropper
-Game - Avoid the red squares, use left and right to move!
+
+Objective:
+  Avoid the red squares.
+
+Controls:
+  Left/Right arrow keys to move.
