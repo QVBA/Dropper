@@ -63,10 +63,6 @@ public class Handler {
         this.objects.add(object);
     }
 
-    public void removeObject(GameObject object) {
-        this.objects.remove(object);
-    }
-
     public GameObject getEntity(int entity) {
         return objects.get(entity);
     }
@@ -104,5 +100,10 @@ public class Handler {
         Player player = new Player(640 / 2-32, (640 / 12 * 9) / 10, GameObjectType.PLAYER);
         addObject(player);
         keyListener.addObject(player);
+    }
+
+    public void spawnEntity(int shouldBeSpeed) {
+        objects.add(new Box());
+        objects.getLast().setYVelocity(shouldBeSpeed);
     }
 }

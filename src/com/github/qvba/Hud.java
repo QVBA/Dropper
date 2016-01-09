@@ -1,11 +1,15 @@
 package com.github.qvba;
 
+import com.github.qvba.Stages.StageHandler;
+
 import java.awt.*;
 
 public class Hud {
 
-    public Hud() {
+    private StageHandler handler;
 
+    public Hud(StageHandler handler) {
+        this.handler = handler;
     }
 
     public void tick() {
@@ -23,7 +27,7 @@ public class Hud {
         String highScore = "High Score: " + Dropper.highScore / 1000;
         g.drawString(highScore, 105 - (g.getFontMetrics().stringWidth(highScore)/ 2), 25);
 
-        String currentStage = "Level: " + Dropper.currentStage.getStageID();
+        String currentStage = "Level: " + handler.getCurrentStage().getStageID();
         g.drawString(currentStage, 535 - (g.getFontMetrics().stringWidth(currentStage) / 2), 25);
 
     }
