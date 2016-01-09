@@ -113,7 +113,6 @@ public class Dropper extends Canvas implements Runnable{
             }
 
             handler.setYVelAll(stageHandler.getShouldBeSpeed(currentTimeInt));
-            //System.out.println("EntityCount: " + handler.getEntityCount());
 
             long now = System.nanoTime();
             currentTime = System.currentTimeMillis() - startTime;
@@ -129,7 +128,6 @@ public class Dropper extends Canvas implements Runnable{
             frames++;
             if(System.currentTimeMillis() - timer > 1000) {
                 timer += 1000;
-                //System.out.println("FPS: "+ frames); // DEBUG.
                 this.FPS = frames;
                 frames = 0;
             }
@@ -141,6 +139,7 @@ public class Dropper extends Canvas implements Runnable{
         reset();
         if(currentTime > highScore) {
             highScore = currentTime;
+            stageHandler.died();
         }
         gameOver = false;
     }

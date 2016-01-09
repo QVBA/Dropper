@@ -48,4 +48,8 @@ public class StageHandler {
         return changed;
     }
 
+    public void died() {
+        currentStage = allStages[0];
+    }
+
 }

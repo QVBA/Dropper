@@ -1,7 +1,7 @@
 package com.github.qvba.Entity;
 
-import com.github.qvba.GameObject;
-import com.github.qvba.GameObjectType;
+import com.github.qvba.GameObjects.GameObject;
+import com.github.qvba.GameObjects.GameObjectType;
 
 import java.awt.*;
 import java.util.Random;

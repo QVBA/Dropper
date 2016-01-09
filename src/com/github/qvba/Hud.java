@@ -24,7 +24,7 @@ public class Hud {
         String timeRunning = "Current Time: " + Dropper.currentTime / 1000;
         g.drawString(timeRunning, 320 - (g.getFontMetrics().stringWidth(timeRunning) / 2), 25);
 
-        String highScore = "High Score: " + Dropper.highScore / 1000;
+        String highScore = "Debug: " + handler.getEntitiesShouldBeSpawned((int) Dropper.currentTime / 1000) + ":" + handler.getShouldBeSpeed((int) Dropper.currentTime / 1000); //DEBUG
         g.drawString(highScore, 105 - (g.getFontMetrics().stringWidth(highScore)/ 2), 25);
 
         String currentStage = "Level: " + handler.getCurrentStage().getStageID();

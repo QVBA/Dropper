@@ -1,6 +1,6 @@
 package com.github.qvba.Keyboard;
 
-import com.github.qvba.GameObject;
+import com.github.qvba.GameObjects.GameObject;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
